@@ -1,10 +1,21 @@
+<div class="w-75 mx-auto my-5 p-3">
+  <h2>Edit Task</h2>
 <%= form_with model: @task do |f| %>
+<div class="mb-3">
   <%= f.label :title %>
   <%= f.text_field :title %>
+  </div>
+  <div class="mb-3">
   <%= f.label :details %>
   <%= f.text_field :details %>
+  </div>
+  <div class="mb-3">
   <%= f.label :completed %>
   <%= f.check_box :completed %>
-  <%= f.submit %>
+  <div>
+  <div class="mb-3">
+  <%= f.submit class: "btn btn-primary my-3" %>
+  </div>
 <% end %>
 <p><%= link_to "Back to the list", tasks_path %></p>
+</div>

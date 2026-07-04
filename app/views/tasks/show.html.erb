@@ -1,7 +1,9 @@
-<h2><%= @task.title%></h2>
-<p><%= @task.details%></p>
-<% if @task.completed %>
-<p><%= "The task is completed"%></p>
-<% end %>
-<p><%= link_to "Edit", edit_task_path %></p>
-<p><%= link_to "Back to the list", tasks_path %></p>
+<div class="w-75 mx-auto my-5 p-3 card">
+  <h2 class="p-2"><%= @task.title%></h2>
+  <p class="card-text"><%= @task.details%></p>
+  <% if @task.completed %>
+  <p class="card-text"><%= "The task is completed"%></p>
+  <% end %>
+  <p><%= link_to "Edit", edit_task_path %></p>
+  <p><%= link_to "Back to the list", tasks_path %></p>
+</div>
